@@ -1,0 +1,228 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>LMS Login - Learning Management System</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ec5b13",
+              "background-light": "#f8f6f6",
+              "background-dark": "#221610",
+            },
+            fontFamily: {
+              display: ["Public Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Public Sans", sans-serif;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col"
+  >
+    <div class="flex-1 flex flex-col justify-center items-center px-4 py-12">
+      <div class="w-full max-w-md space-y-8">
+        <!-- Header/Logo Area -->
+        <div class="text-center">
+          <div
+            class="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary mb-6"
+          >
+            <span class="material-symbols-outlined text-4xl">school</span>
+          </div>
+          <h2
+            class="text-slate-900 dark:text-slate-100 text-3xl font-bold tracking-tight"
+          >
+            Welcome Back
+          </h2>
+          <p class="text-slate-600 dark:text-slate-400 mt-2 text-base">
+            Please enter your credentials to access your courses
+          </p>
+        </div>
+        <!-- Login Form -->
+        <div
+          class="bg-white dark:bg-slate-900/50 p-8 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800"
+        >
+          <form action="#" class="space-y-6" method="POST">
+            <!-- Email Field -->
+            <div class="flex flex-col gap-2">
+              <label
+                class="text-slate-700 dark:text-slate-300 text-sm font-semibold"
+                for="email"
+                >Email Address</label
+              >
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >mail</span
+                  >
+                </div>
+                <input
+                  class="form-input block w-full pl-10 pr-4 py-3 border border-slate-200 dark:border-slate-700 rounded-lg bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200"
+                  id="email"
+                  name="email"
+                  placeholder="name@university.edu"
+                  required=""
+                  type="email"
+                />
+              </div>
+            </div>
+            <!-- Password Field -->
+            <div class="flex flex-col gap-2">
+              <div class="flex justify-between items-center">
+                <label
+                  class="text-slate-700 dark:text-slate-300 text-sm font-semibold"
+                  for="password"
+                  >Password</label
+                >
+                <a
+                  class="text-primary text-sm font-medium hover:underline"
+                  href="#"
+                  >Forgot password?</a
+                >
+              </div>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >lock</span
+                  >
+                </div>
+                <input
+                  class="form-input block w-full pl-10 pr-12 py-3 border border-slate-200 dark:border-slate-700 rounded-lg bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200"
+                  id="password"
+                  name="password"
+                  placeholder="••••••••"
+                  required=""
+                  type="password"
+                />
+                <button
+                  class="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
+                  type="button"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >visibility</span
+                  >
+                </button>
+              </div>
+            </div>
+            <!-- Remember Me -->
+            <div class="flex items-center">
+              <input
+                class="h-4 w-4 text-primary border-slate-300 dark:border-slate-700 rounded focus:ring-primary bg-slate-50 dark:bg-slate-800"
+                id="remember-me"
+                name="remember-me"
+                type="checkbox"
+              />
+              <label
+                class="ml-2 block text-sm text-slate-600 dark:text-slate-400"
+                for="remember-me"
+              >
+                Remember me for 30 days
+              </label>
+            </div>
+            <!-- Login Button -->
+            <button
+              class="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-base font-semibold text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-200"
+              type="submit"
+            >
+              Sign In
+            </button>
+          </form>
+          <!-- Divider -->
+          <div class="relative my-8">
+            <div class="absolute inset-0 flex items-center">
+              <div
+                class="w-full border-t border-slate-200 dark:border-slate-800"
+              ></div>
+            </div>
+            <div class="relative flex justify-center text-sm">
+              <span class="px-2 bg-white dark:bg-[#2a1d15] text-slate-500"
+                >Or continue with</span
+              >
+            </div>
+          </div>
+          <!-- Social Logins -->
+          <div class="grid grid-cols-2 gap-4">
+            <button
+              class="flex items-center justify-center py-2.5 px-4 border border-slate-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
+            >
+              <img
+                alt="Google"
+                class="h-5 w-5 mr-2"
+                data-alt="Google company color logo"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4NqAMbWcsrvWa2512mJTLtZrlp8BF_YxzZDgaKj9RyaAPX4p7Id8taO-vbtVmHC7ZXto_c7w0XEpO6eaL8ujM7l8-xK4TNerbYjvzQ0_FWZfQs_2qUuagqTKn22oWw1DWautVHvzvN4XWEzTcMpiVn43z6LRp2bcxssNa9dFynCmXJf8MZSC_aa0MiAAQK81YMgkFOcwFatPVuAsg9I_hopTXDEJkvQZEKSGT73epBmBl6gIoa0SXyBJPg1QQhUeW5FLlOHO9MQ"
+              />
+              <span
+                class="text-sm font-medium text-slate-700 dark:text-slate-300"
+                >Google</span
+              >
+            </button>
+            <button
+              class="flex items-center justify-center py-2.5 px-4 border border-slate-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
+            >
+              <img
+                alt="Microsoft"
+                class="h-5 w-5 mr-2"
+                data-alt="Microsoft company color logo"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgK1XkintYAVqLmhrNs8wDpOSa38UQIPSIy1A8KYiOd84ztQj_55ud7XlvqpuojP4Mr8hzglujEKI8dz_Et40dFqsqIz1lJCPUDOqh5uZHu2DEyesTPp6qIxu-NxnXUYeL5MdBgPPHP36lUNrpF5wsQ9fd2OypweujkQREhHOkQYwx1sLpqwwYrXVjUaB3iqHwdnBifUcmUWdwey1SikpRyqtlkdlMah8ZpsU3eYmpH73gYRIQ9d0lD1kH_uxF1UTlh0fmoPErvA"
+              />
+              <span
+                class="text-sm font-medium text-slate-700 dark:text-slate-300"
+                >Microsoft</span
+              >
+            </button>
+          </div>
+        </div>
+        <!-- Footer Link -->
+        <p class="text-center text-sm text-slate-600 dark:text-slate-400">
+          Don't have an account?
+          <a class="font-semibold text-primary hover:underline" href="#"
+            >Contact your administrator</a
+          >
+        </p>
+      </div>
+    </div>
+    <!-- Bottom Navigation/Footer (Optional for simple login) -->
+    <footer class="p-6 text-center text-slate-400 text-xs">
+      © 2024 Learning Management System. All rights reserved.
+    </footer>
+  </body>
+</html>
