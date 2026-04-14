@@ -3,8 +3,9 @@ import {FLUSH, PAUSE, PERSIST, persistCombineReducers, PURGE, REGISTER, REHYDRAT
 import { api } from "./base"
 import { auth } from "./auth"
 import { configureStore } from "@reduxjs/toolkit"
-// import persistStore from "redux-persist/es/persistStore"
+import { persistStore } from 'redux-persist';
 import { setupListeners } from "@reduxjs/toolkit/query"
+import storage from "redux-persist/es/storage";
 
 const persistedReducer = persistCombineReducers({
      key: "root",

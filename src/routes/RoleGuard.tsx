@@ -1,16 +1,20 @@
-import { Navigate, Outlet, useOutletContext } from "react-router-dom";
+import { useAppSelector } from "@/api/data";
+import { Navigate, Outlet } from "react-router-dom";
 
 const RoleGuard = ({ allowedRoles }) => {
   // const {user} =useOutletContext()
 
-//   const { user } = useSelector((state) => state.auth);
+  const { role } = useAppSelector((state) => state.auth);
+  console.log("role guard user", role)
 
 
-//  if (!user) {
-//     return <Navigate to="/login" />;
-//   }
+  if (!role) {
+    return <Navigate to="/login" replace />;
+  }
 
-  if (!allowedRoles.includes("INSTRUCTOR")) {
+
+
+  if (!allowedRoles.includes(role)) {
     return <Navigate to="/unauthorized" />;
   }
 

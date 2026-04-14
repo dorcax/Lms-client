@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+        "module": "esnext",
+    "target": "esnext",
+      "moduleResolution": "bundler",
+      "types": ["vite/client"],
     "composite": true,
     "baseUrl": ".",
      "jsx": "react-jsx",

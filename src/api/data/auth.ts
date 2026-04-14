@@ -1,6 +1,6 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import type { AuthState } from "../api.type";
-import { useAppDispatch, useAppSelector } from ".";
+import type { AuthState } from "./api.types";
+import { useAppDispatch, useAppSelector } from "./index";
 import { useMemo } from "react";
 
 export const emptyAuth: AuthState = {

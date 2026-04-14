@@ -19,8 +19,11 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { Link } from "react-router-dom";
+import { useAppSelector } from "@/api/data";
 
 export function AppSidebar() {
+    const { role, name} = useAppSelector((state) => state.auth);
+    
   const items = {
     STUDENT: [
       {
@@ -67,11 +70,7 @@ export function AppSidebar() {
         icon: Home,
       },
 
-      {
-        title: "create course",
-        url: "/dashboard/instructor/create-course",
-        icon: Calendar,
-      },
+      
       {
         title: "student",
         url: "/dashboard/instructor/studentlist",
@@ -133,14 +132,14 @@ export function AppSidebar() {
               <div>
                 <h1 className="text-lg font-bold leading-none">ED</h1>
                 <p className="text-xs text-slate-500 mt-1">
-                  Property Management
+              learning dashbaord
                 </p>
               </div>
             </div>
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu className="flex-1 px-4 py-4 space-y-2 pt-10">
-              {items["INSTRUCTOR"].map((item) => (
+              {items[role].map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton
                     asChild
@@ -171,9 +170,9 @@ export function AppSidebar() {
                   }}
                 ></div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium truncate">Alex Thompson</p>
+                  <p className="text-sm font-medium truncate">{name}</p>
                   <p className="text-xs text-slate-500 truncate">
-                    General Manager
+                 {role}
                   </p>
                 </div>
                 <LogOut size={16} />

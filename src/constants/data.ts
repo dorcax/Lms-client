@@ -1,4 +1,5 @@
 import { Certificate } from "@/component/CertificateCard"
+import { CourseList } from "@/pages/Instructor/CoursesPage"
 
 export const data =[
   {
@@ -473,29 +474,109 @@ export const enrolledStudent =[
 ]
 
 
-export const instructorCourses =[
+
+export const courseList: CourseList[] = [
   {
-    "id": 1,
-    "title": "Advanced Macroeconomic Theory & Policy",
-    "category": "Economics",
-    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBF8hSDPYJmyu6ccBjhQaRkBwKUOqg4aRDevh7byRcES6iFWwHhd_BDoh6ipAlQ759W1HLOzSw6XPr7T_Hv01qJ9g-W6kQ7O7wBE9Ool3TXbO-BFknp62TUwzIrft-iGkZ9XFGkJW3PMe1fxYA3PA6v2glIJrYMTcA5neTnmUlaeCz1Je4sM2gK_kgx9qDX5WHG81bv18BC37ZKqIxvdY5ifX2kE6pp3LETq0YelaSnMu_Z0sw9TgXF12kHhkEK4AkdnaFiNqYlTw",
-    "students": 1240,
-    "rating": 4.9,
-    "price": 149,
-    "status": "Published"
+    id: 1,
+    title: "Modern Microeconomic Analysis",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f",
+    category: "Economics",
+    modules: 8,
+    lessons: 42,
+    status: "Published",
+    instructor: "Dr. Samuel Carter",
   },
   {
-    "id": 2,
-    "title": "Predictive Modeling for Complex Systems",
-    "category": "Data Science",
-    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDXTtmv2iI6lS6xuNi3SHViGzEkQYJy1vre5129pBexO1CsH-zOVGD0XTeJCqmEB910PRyO93-ZY-kSed4KfjA_BeF3Q3bcF2jh9V1ABaCI18vmAfiQM5pDu4pPWBB5c5tdrKmIoEOjJ7fZiZ3V6m0Ki81bwPZNfEkL2EiYBtvPflnPmb6NwVyLjZBYCRrFQsy8UN74aa7WeylGBxgbN-IOlQvop4VY7_9FvENPqXdkkJLbjbpSMpc2RNB15q_cmSexZ3VfQJRwbQ",
-    "students": 0,
-    "rating": null,
-    "price": 299,
-    "status": "Draft"
-  }
-]
-
+    id: 2,
+    title: "Machine Learning Foundations",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    category: "Data Science",
+    modules: 10,
+    lessons: 55,
+    status: "Published",
+    instructor: "Prof. Linda Watson",
+  },
+  {
+    id: 3,
+    title: "Financial Markets and Investment Strategy",
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
+    category: "Finance",
+    modules: 9,
+    lessons: 47,
+    status: "Published",
+    instructor: "Dr. Andrew Collins",
+  },
+  {
+    id: 4,
+    title: "Introduction to Artificial Intelligence",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+    category: "Computer Science",
+    modules: 7,
+    lessons: 36,
+    status: "Draft",
+    instructor: "Dr. Maria Lopez",
+  },
+  {
+    id: 5,
+    title: "Full Stack Web Development",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    category: "Software Development",
+    modules: 12,
+    lessons: 68,
+    status: "Published",
+    instructor: "James Robertson",
+  },
+  {
+    id: 6,
+    title: "Cybersecurity Fundamentals",
+    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3",
+    category: "Cybersecurity",
+    modules: 6,
+    lessons: 30,
+    status: "Published",
+    instructor: "Sophia Bennett",
+  },
+  {
+    id: 7,
+    title: "Cloud Computing with AWS",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+    category: "Cloud Computing",
+    modules: 8,
+    lessons: 44,
+    status: "Draft",
+    instructor: "Michael Adams",
+  },
+  {
+    id: 8,
+    title: "UI/UX Design Principles",
+    image: "https://images.unsplash.com/photo-1559028012-481c04fa702d",
+    category: "Design",
+    modules: 5,
+    lessons: 28,
+    status: "Published",
+    instructor: "Emily Clark",
+  },
+  {
+    id: 9,
+    title: "Data Visualization with Python",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    category: "Data Science",
+    modules: 7,
+    lessons: 33,
+    status: "Published",
+    instructor: "David Turner",
+  },
+  {
+    id: 10,
+    title: "Blockchain Technology and Applications",
+    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0",
+    category: "Blockchain",
+    modules: 6,
+    lessons: 29,
+    status: "Draft",
+    instructor: "Olivia Martinez",
+  },
+];
 
 export const reviews = [
   {

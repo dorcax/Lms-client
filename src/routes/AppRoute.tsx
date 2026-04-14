@@ -20,6 +20,8 @@ import StudentList from "@/pages/Instructor/StudentList";
 import Review from "@/pages/Instructor/Review";
 import Announcement from "@/pages/Instructor/Announcement";
 import Setting from "@/pages/Instructor/Setting";
+import { VerifyPassword } from "@/pages/auth/VerifyPassword";
+import CourseBuilderPage from "@/pages/Instructor/ManageCourse";
 
 
 const router = createBrowserRouter([
@@ -34,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: '/login',
     element: <Login />,
+  },
+  {
+    path: '/verify-password',
+    element: <VerifyPassword />,
   },
   {
     path: '/forgot-password',
@@ -99,6 +105,10 @@ const router = createBrowserRouter([
        {
          path: "studentlist",
          element: <StudentList />
+       },
+       {
+         path: "courses/:courseId",
+         element: <CourseBuilderPage />
        },
        {
          path: "review",
